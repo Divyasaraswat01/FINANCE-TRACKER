@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+body {
+    background: #f4f7f9;
+    min-height: 100vh;
+}
+
+
+/* Sidebar */
+
+.sidebar {
+    position: fixed;
+
+    left: 0;
+    top: 0;
+
+    width: 230px;
+    height: 100vh;
+
+    background: #1f2937;
+
+    padding: 25px 15px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+.sidebar h2 {
+    color: white;
+
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+
+.sidebar a {
+    color: white;
+
+    text-decoration: none;
+
+    padding: 13px 15px;
+
+    margin: 4px 0;
+
+    border-radius: 8px;
+
+    transition: 0.2s;
+}
+
+
+.sidebar a:hover {
+    background: #374151;
+}
+
+
+/* Main */
+
+.main {
+    margin-left: 230px;
+
+    padding: 40px;
+}
+
+
+/* Container */
+
+.container {
+    width: 100%;
+
+    max-width: 1100px;
+
+    margin: auto;
+}
+
+
+h1 {
+    color: #2E8B57;
+
+    margin-bottom: 30px;
+}
+
+
+/* Categories */
+
+#categoryContainer {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+/* Category Card */
+
+.category-card {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 14px;
+
+    text-align: center;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.08);
+
+    transition: 0.2s;
+}
+
+
+.category-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+
+.category-icon {
+    font-size: 42px;
+
+    margin-bottom: 12px;
+}
+
+
+.category-card h2 {
+    margin: 10px 0 20px;
+
+    color: #333;
+}
+
+
+.category-card p {
+    margin: 10px 0;
+
+    color: #555;
+}
+
+
+.category-card h3 {
+    margin-top: 20px;
+
+    padding-top: 15px;
+
+    border-top: 1px solid #eee;
+
+    color: #2E8B57;
+}
+
+
+/* Loading / Empty message */
+
+#categoryContainer > p {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    color: #777;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Mobile */
+
+@media (max-width: 900px) {
+
+    #categoryContainer {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .sidebar {
+        position: relative;
+
+        width: 100%;
+
+        height: auto;
+    }
+
+
+    .main {
+        margin-left: 0;
+
+        padding: 20px;
+    }
+
+
+    #categoryContainer {
+        grid-template-columns: 1fr;
+    }
+
+}

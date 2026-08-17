@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Add Income</title>
+
+    <link rel="stylesheet" href="css/income.css">
+    <link rel="stylesheet" href="css/notification.css">
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+    <h2>💰 Finance Tracker</h2>
+
+    <a href="dashboard.html">🏠 Dashboard</a>
+
+    <a href="income.html">💵 Income</a>
+
+    <a href="expense.html">💸 Expense</a>
+
+    <a href="transaction.html">📋 Transactions</a>
+
+    <a href="categories.html">📂 Categories</a>
+
+    <a href="reports.html">📊 Reports</a>
+
+    <a href="profile.html">👤 Profile</a>
+
+    <a href="#" id="logoutLink">🚪 Logout</a>
+
+</div>
+
+
+<div class="main">
+
+    <div class="container">
+
+        <h1>💵 Add Income</h1>
+
+        <form id="incomeForm">
+
+            <input
+                type="text"
+                id="source"
+                placeholder="Income Source"
+                required
+            >
+
+            <input
+                type="number"
+                id="amount"
+                placeholder="Amount"
+                min="1"
+                required
+            >
+
+            <input
+                type="date"
+                id="date"
+                required
+            >
+
+            <button type="submit">
+                Add Income
+            </button>
+
+        </form>
+
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>Source</th>
+                    <th>Amount</th>
+                    <th>Date</th>
+                </tr>
+
+            </thead>
+
+            <tbody id="incomeTableBody">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+
+<script src="js/notification.js"></script>
+<script src="js/income.js"></script>
+
+</body>
+
+</html>

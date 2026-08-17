@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Transactions</title>
+
+    <link rel="stylesheet" href="css/transaction.css">
+    <link rel="stylesheet" href="css/notification.css">
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+    <h2>💰 Finance Tracker</h2>
+
+    <a href="dashboard.html">🏠 Dashboard</a>
+
+    <a href="income.html">💵 Income</a>
+
+    <a href="expense.html">💸 Expense</a>
+
+    <a href="transaction.html">📋 Transactions</a>
+
+    <a href="categories.html">📂 Categories</a>
+
+    <a href="reports.html">📊 Reports</a>
+
+    <a href="profile.html">👤 Profile</a>
+
+    <a href="#" id="logoutLink">🚪 Logout</a>
+
+</div>
+
+
+<div class="main">
+
+    <div class="container">
+
+        <h1>📋 Transaction History</h1>
+
+
+        <!-- Search and Filter -->
+
+        <div class="filter">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="🔍 Search Transaction"
+            >
+
+            <select id="typeFilter">
+
+                <option value="ALL">
+                    All Transactions
+                </option>
+
+                <option value="INCOME">
+                    Income
+                </option>
+
+                <option value="EXPENSE">
+                    Expense
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- Edit Transaction -->
+
+        <div id="editBox" style="display: none;">
+
+            <h2>✏️ Edit Transaction</h2>
+
+            <form id="editForm">
+
+                <input
+                    type="text"
+                    id="editDescription"
+                    placeholder="Title"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="editCategory"
+                    placeholder="Category"
+                    required
+                >
+
+                <input
+                    type="number"
+                    id="editAmount"
+                    placeholder="Amount"
+                    min="1"
+                    required
+                >
+
+                <input
+                    type="date"
+                    id="editDate"
+                    required
+                >
+
+                <button type="submit">
+                    Save Changes
+                </button>
+
+                <button
+                    type="button"
+                    id="cancelEdit"
+                >
+                    Cancel
+                </button>
+
+            </form>
+
+        </div>
+
+
+        <!-- Transaction Table -->
+
+        <div class="table-wrapper">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Type</th>
+                        <th>Title</th>
+                        <th>Category</th>
+                        <th>Amount</th>
+                        <th>Date</th>
+                        <th>Action</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="transactionTableBody">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="js/notification.js"></script>
+<script src="js/transaction.js"></script>
+
+</body>
+
+</html>

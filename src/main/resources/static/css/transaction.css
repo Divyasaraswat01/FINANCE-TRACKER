@@ -1,0 +1,322 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+body {
+    background: #f4f7f9;
+    min-height: 100vh;
+}
+
+
+/* Sidebar */
+
+.sidebar {
+    position: fixed;
+
+    left: 0;
+    top: 0;
+
+    width: 230px;
+    height: 100vh;
+
+    background: #1f2937;
+
+    padding: 25px 15px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+.sidebar h2 {
+    color: white;
+
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+
+.sidebar a {
+    color: white;
+
+    text-decoration: none;
+
+    padding: 13px 15px;
+
+    margin: 4px 0;
+
+    border-radius: 8px;
+
+    transition: 0.2s;
+}
+
+
+.sidebar a:hover {
+    background: #374151;
+}
+
+
+/* Main */
+
+.main {
+    margin-left: 230px;
+
+    padding: 40px;
+}
+
+
+/* Container */
+
+.container {
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.10);
+}
+
+
+h1 {
+    color: #2E8B57;
+
+    margin-bottom: 25px;
+}
+
+
+/* Search and filter */
+
+.filter {
+    display: flex;
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+}
+
+
+.filter input,
+.filter select {
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+}
+
+
+.filter input {
+    flex: 1;
+}
+
+
+.filter select {
+    min-width: 180px;
+}
+
+
+.filter input:focus,
+.filter select:focus {
+    outline: none;
+
+    border-color: #2E8B57;
+}
+
+
+/* Edit box */
+
+#editBox {
+    background: #f8faf9;
+
+    border: 1px solid #ddd;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    margin-bottom: 25px;
+}
+
+
+#editBox h2 {
+    margin-bottom: 20px;
+
+    color: #2E8B57;
+}
+
+
+#editForm {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 12px;
+}
+
+
+#editForm input {
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+}
+
+
+#editForm button {
+    padding: 11px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+}
+
+
+#editForm button[type="submit"] {
+    background: #2E8B57;
+
+    color: white;
+}
+
+
+#cancelEdit {
+    background: #777;
+
+    color: white;
+}
+
+
+/* Table */
+
+.table-wrapper {
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 750px;
+}
+
+
+table th,
+table td {
+    padding: 13px;
+
+    border-bottom: 1px solid #ddd;
+
+    text-align: center;
+}
+
+
+table th {
+    background: #2E8B57;
+
+    color: white;
+}
+
+
+table tbody tr:hover {
+    background: #f8faf9;
+}
+
+
+/* Action buttons */
+
+table button {
+    padding: 8px 12px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    margin: 2px;
+
+    color: white;
+}
+
+
+table button:first-child {
+    background: #1976d2;
+}
+
+
+table button:last-child {
+    background: #d32f2f;
+}
+
+
+table button:hover {
+    opacity: 0.85;
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .sidebar {
+        position: relative;
+
+        width: 100%;
+
+        height: auto;
+    }
+
+
+    .main {
+        margin-left: 0;
+
+        padding: 20px;
+    }
+
+
+    .container {
+        padding: 20px;
+    }
+
+
+    .filter {
+        flex-direction: column;
+    }
+
+
+    .filter select {
+        width: 100%;
+    }
+
+
+    #editForm {
+        grid-template-columns: 1fr;
+    }
+
+}

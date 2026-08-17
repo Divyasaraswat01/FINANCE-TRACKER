@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Profile</title>
+
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/notification.css">
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+    <h2>💰 Finance Tracker</h2>
+
+    <a href="dashboard.html">🏠 Dashboard</a>
+    <a href="income.html">💵 Income</a>
+    <a href="expense.html">💸 Expense</a>
+    <a href="transaction.html">📋 Transactions</a>
+    <a href="categories.html">📂 Categories</a>
+    <a href="reports.html">📊 Reports</a>
+    <a href="profile.html">👤 Profile</a>
+
+    <a href="#" id="logoutLink">🚪 Logout</a>
+
+</div>
+
+
+<div class="main">
+
+    <div class="container">
+
+        <h1>👤 My Profile</h1>
+
+
+        <div class="profile-card">
+
+            <div class="profile-icon">
+                👤
+            </div>
+
+
+            <h2 id="profileName">
+                User
+            </h2>
+
+
+            <div class="profile-info">
+
+                <div class="info-item">
+
+                    <span class="info-label">
+                        Email
+                    </span>
+
+                    <span
+                        id="profileEmail"
+                        class="info-value">
+                    </span>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <span class="info-label">
+                        User ID
+                    </span>
+
+                    <span
+                        id="profileId"
+                        class="info-value">
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <button id="logoutButton">
+                🚪 Logout
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="js/notification.js"></script>
+<script src="js/profile.js"></script>
+
+</body>
+
+</html>

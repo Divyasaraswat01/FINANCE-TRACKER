@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+body {
+    background: #f4f7f9;
+    min-height: 100vh;
+}
+
+
+/* Sidebar */
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    width: 230px;
+    height: 100vh;
+
+    background: #1f2937;
+
+    padding: 25px 15px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+.sidebar h2 {
+    color: white;
+
+    margin-bottom: 30px;
+
+    text-align: center;
+}
+
+
+.sidebar a {
+    color: white;
+
+    text-decoration: none;
+
+    padding: 13px 15px;
+
+    margin: 4px 0;
+
+    border-radius: 8px;
+
+    transition: 0.2s;
+}
+
+
+.sidebar a:hover {
+    background: #374151;
+}
+
+
+/* Main */
+
+.main {
+    margin-left: 230px;
+
+    padding: 40px;
+}
+
+
+/* Container */
+
+.container {
+    max-width: 900px;
+
+    margin: auto;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.10);
+}
+
+
+h1 {
+    color: #d32f2f;
+
+    margin-bottom: 25px;
+}
+
+
+/* Form */
+
+form {
+    margin-bottom: 30px;
+}
+
+
+input,
+select {
+    width: 100%;
+
+    padding: 12px;
+
+    margin: 8px 0;
+
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+}
+
+
+input:focus,
+select:focus {
+    outline: none;
+
+    border-color: #d32f2f;
+
+    box-shadow:
+        0 0 0 2px rgba(211, 47, 47, 0.10);
+}
+
+
+/* Button */
+
+button {
+    width: 100%;
+
+    padding: 12px;
+
+    margin-top: 8px;
+
+    background: #d32f2f;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    transition: 0.2s;
+}
+
+
+button:hover {
+    background: #b71c1c;
+}
+
+
+/* Table */
+
+table {
+    width: 100%;
+
+    margin-top: 25px;
+
+    border-collapse: collapse;
+}
+
+
+table th,
+table td {
+    padding: 13px;
+
+    border-bottom: 1px solid #ddd;
+
+    text-align: center;
+}
+
+
+table th {
+    background: #d32f2f;
+
+    color: white;
+}
+
+
+table tr:hover {
+    background: #fff5f5;
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .sidebar {
+        position: relative;
+
+        width: 100%;
+
+        height: auto;
+    }
+
+
+    .sidebar a {
+        text-align: center;
+    }
+
+
+    .main {
+        margin-left: 0;
+
+        padding: 20px;
+    }
+
+
+    .container {
+        width: 100%;
+    }
+
+}

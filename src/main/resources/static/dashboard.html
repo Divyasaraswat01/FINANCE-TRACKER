@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/notification.css">
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+    <h2>💰 Finance Tracker</h2>
+
+    <a href="dashboard.html">🏠 Dashboard</a>
+    <a href="income.html">💵 Income</a>
+    <a href="expense.html">💸 Expense</a>
+    <a href="transaction.html">📋 Transactions</a>
+    <a href="categories.html">📂 Categories</a>
+    <a href="reports.html">📊 Reports</a>
+    <a href="profile.html">👤 Profile</a>
+
+    <a href="#" id="logoutLink">🚪 Logout</a>
+
+</div>
+
+
+<div class="main">
+
+    <h1>Dashboard</h1>
+
+    <p class="welcome">
+        Welcome back! Here's your financial overview.
+    </p>
+
+
+    <div class="cards">
+
+        <div class="card balance-card">
+
+            <div class="card-icon">
+                💰
+            </div>
+
+            <h3>Total Balance</h3>
+
+            <h2 id="totalBalance">
+                ₹0
+            </h2>
+
+        </div>
+
+
+        <div class="card income-card">
+
+            <div class="card-icon">
+                💵
+            </div>
+
+            <h3>Total Income</h3>
+
+            <h2 id="totalIncome">
+                ₹0
+            </h2>
+
+        </div>
+
+
+        <div class="card expense-card">
+
+            <div class="card-icon">
+                💸
+            </div>
+
+            <h3>Total Expense</h3>
+
+            <h2 id="totalExpense">
+                ₹0
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    <div class="quick-actions">
+
+        <h2>Quick Actions</h2>
+
+        <div class="action-buttons">
+
+            <a href="income.html">
+                ➕ Add Income
+            </a>
+
+            <a href="expense.html">
+                ➖ Add Expense
+            </a>
+
+            <a href="transaction.html">
+                📋 View Transactions
+            </a>
+
+            <a href="reports.html">
+                📊 View Reports
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="js/notification.js"></script>
+<script src="js/dashboard.js"></script>
+
+</body>
+
+</html>
