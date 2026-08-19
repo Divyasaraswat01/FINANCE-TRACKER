@@ -66,8 +66,14 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build Docker image
-        run: docker build -t ghcr.io/divyasaraswat01/finance-tracker:${{ github.sha }} .
+             - name: Build Docker image
+        run: |
+          docker build \
+            -t ghcr.io/divyasaraswat01/finance-tracker:${{ github.sha }} \
+            -t ghcr.io/divyasaraswat01/finance-tracker:latest \
+            .
 
       - name: Push Docker image
-        run: docker push ghcr.io/divyasaraswat01/finance-tracker:${{ github.sha }}
+        run: |
+          docker push ghcr.io/divyasaraswat01/finance-tracker:${{ github.sha }}
+          docker push ghcr.io/divyasaraswat01/finance-tracker:latest
