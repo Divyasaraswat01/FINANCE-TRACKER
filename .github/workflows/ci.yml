@@ -14,9 +14,7 @@ permissions:
   packages: write
 
 jobs:
-
   build:
-
     runs-on: ubuntu-latest
 
     services:
@@ -39,7 +37,6 @@ jobs:
       SPRING_DATASOURCE_PASSWORD: ${{ secrets.MYSQL_ROOT_PASSWORD }}
 
     steps:
-
       - name: Checkout code
         uses: actions/checkout@v4
 
@@ -66,7 +63,7 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-             - name: Build Docker image
+      - name: Build Docker image
         run: |
           docker build \
             -t ghcr.io/divyasaraswat01/finance-tracker:${{ github.sha }} \
