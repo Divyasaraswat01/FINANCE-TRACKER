@@ -6,7 +6,7 @@ services:
     restart: unless-stopped
 
     environment:
-      MYSQL_ROOT_PASSWORD: root28
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       MYSQL_DATABASE: finance_tracker
 
     ports:
@@ -15,9 +15,8 @@ services:
     volumes:
       - mysql_data:/var/lib/mysql
 
-
   finance-tracker:
-    image: finance-tracker:1.0
+    image: ghcr.io/divyasaraswat01/finance-tracker:latest
     container_name: finance-tracker-app
     restart: unless-stopped
 
@@ -30,9 +29,8 @@ services:
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/finance_tracker
       SPRING_DATASOURCE_USERNAME: root
-      SPRING_DATASOURCE_PASSWORD: root28
+      SPRING_DATASOURCE_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       SPRING_JPA_HIBERNATE_DDL_AUTO: update
-
 
 volumes:
   mysql_data:
