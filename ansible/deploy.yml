@@ -1,0 +1,21 @@
+---
+- name: Deploy Finance Tracker
+  hosts: local
+  connection: local
+
+  tasks:
+
+    - name: Start Finance Tracker services
+      ansible.builtin.command:
+        cmd: docker compose up -d
+        chdir: /mnt/c/Users/divya/finance-tracker
+
+    - name: Show running containers
+      ansible.builtin.command:
+        cmd: docker compose ps
+        chdir: /mnt/c/Users/divya/finance-tracker
+      register: compose_status
+
+    - name: Display container status
+      ansible.builtin.debug:
+        var: compose_status.stdout_lines
